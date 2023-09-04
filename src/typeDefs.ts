@@ -1,5 +1,19 @@
 export const typeDefs = `#graphql
 
+  type Lists {
+    countries: [String!]!
+    cities:  [String!]!
+    brands: [String!]!
+    models: [String!]!
+    years: [String!]!
+    bodyTypes: [String!]!
+    colors: [String!]!
+    fuelTypes: [String!]!
+    transmissions:  [String!]!
+    drivetrains: [String!]!
+    features: [String!]!
+  }
+
   type ClientCar {
     id: Int!
     images: [ClientCarImage]
@@ -107,6 +121,7 @@ export const typeDefs = `#graphql
   type Query {
     clientCars: [ClientCar]
     clientCarimages: [ClientCarImage]
+    lists: Lists
   }
 
   type Mutation {

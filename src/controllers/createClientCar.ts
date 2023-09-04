@@ -57,7 +57,6 @@ export const createClientCar = async (parent, {car}) => {
 
         const completeCar = await clientCarsRepo.findOneBy({id: createdCar.id})
         
-        console.log('cars', completeCar);
         return {
             isSuccess: true,
             message: "Car wasn't add",
